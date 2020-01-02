@@ -64,11 +64,11 @@ DATA.append(go.Scatter(
     x=X_COORDS,
     y=Y_COORDS,
     mode='markers',
-    name="Test"
+    name="SeaTemp"
 ))
 linear_regress()
 
-filename = "plots/Test.html"
+filename = "plots/ChangeSeaTemp.html"
 plotly.offline.plot({
     "data": DATA,
     "layout": layout,
