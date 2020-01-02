@@ -56,7 +56,7 @@ def format_layout():
 
 global X_AXIS, Y_AXIS;
 X_AXIS = "Year";
-Y_AXIS = "Change in Ocean Temperature";
+Y_AXIS = "Difference in Ocean Temperature From Average";
 
 initialize_coords()
 layout = format_layout()
@@ -68,7 +68,7 @@ DATA.append(go.Scatter(
 ))
 linear_regress()
 
-filename = "plots/ChangeSeaTemp.html"
+filename = "plots/SeaTemp.html"
 plotly.offline.plot({
     "data": DATA,
     "layout": layout,
