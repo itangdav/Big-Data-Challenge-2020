@@ -31,7 +31,7 @@ def linear_regress():
         x=[0.0, max(X_COORDS)],
         y=[intercept, slope * max(X_COORDS) + intercept],
         mode='lines',
-        name=("Regression Line Linear, R=" + str(r_value))
+        name=("Regression Line Linear, R=" + str(r_value) + " \nEquation is: y=" + str(slope) +"x+" + str(intercept))
     ))
 
 def format_layout():
@@ -56,7 +56,7 @@ def format_layout():
 
 global X_AXIS, Y_AXIS;
 X_AXIS = "Year";
-Y_AXIS = "Difference in Ocean Temperature From Average";
+Y_AXIS = "Difference in Ocean Temperature From Average (°C)";
 
 initialize_coords()
 layout = format_layout()
