@@ -15,7 +15,7 @@ def initialize_coords():
         population = float(i[:i.index("|")])
         change = float(i[i.index("|")+1:i.rindex("|")])
         distance = float(i[i.rindex("|")+1:])
-        if(population>=300 and population<600):
+        if True:
             X_COORDS.append(distance)
             Y_COORDS.append(change)
 
@@ -70,7 +70,7 @@ DATA.append(go.Scatter(
 ))
 linear_regress()
 
-filename = "plots/SmallCities.html"
+filename = "plots/AllCities.html"
 plotly.offline.plot({
     "data": DATA,
     "layout": layout,

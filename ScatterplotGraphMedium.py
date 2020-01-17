@@ -15,7 +15,7 @@ def initialize_coords():
         population = float(i[:i.index("|")])
         change = float(i[i.index("|")+1:i.rindex("|")])
         distance = float(i[i.rindex("|")+1:])
-        if(population>=700 and population<1000):
+        if(population>=600 and population<1000):
             X_COORDS.append(distance)
             Y_COORDS.append(change)
 
@@ -33,7 +33,7 @@ def linear_regress():
         x=[0.0, max(X_COORDS)],
         y=[intercept, slope * max(X_COORDS) + intercept],
         mode='lines',
-        name=("Regression Line Linear, R=" + str(r_value))
+        name=("Regression Line Linear, R=" + str(r_value) + " \nEquation is: y=" + str(slope) +"x+" + str(intercept))
     ))
 
 def format_layout():
@@ -57,7 +57,7 @@ def format_layout():
 
 
 global X_AXIS, Y_AXIS;
-X_AXIS = "Distance to Ocean";
+X_AXIS = "Distance to Ocean (miles)";
 Y_AXIS = "Change in Growth from 2017 to 2018";
 
 initialize_coords()
@@ -66,7 +66,7 @@ DATA.append(go.Scatter(
     x=X_COORDS,
     y=Y_COORDS,
     mode='markers',
-    name="Test"
+    name="DataPoints"
 ))
 linear_regress()
 
